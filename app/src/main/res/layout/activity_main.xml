@@ -92,7 +92,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+ ?"
+            android:text="\?"
             android:textSize="20sp"/>
 
 
@@ -223,6 +223,150 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1등횟수"/>
+
+        <TextView
+            android:id="@+id/txtRankCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2등횟수"/>
+
+        <TextView
+            android:id="@+id/txtRankCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3등횟수"/>
+
+        <TextView
+            android:id="@+id/txtRankCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4등횟수"/>
+
+        <TextView
+            android:id="@+id/txtRankCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5등횟수"/>
+
+        <TextView
+            android:id="@+id/txtRankCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6등횟수"/>
+
+        <TextView
+            android:id="@+id/txtRankCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+
+
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

@@ -255,7 +255,7 @@ class MainActivity : AppCompatActivity() {
 
     fun setValues() {
 
-        mHandler = Handler(loo)
+        mHandler = Handler()
        mLottoNumTxtList = arrayListOf( txtLottoNum1,txtLottoNum2,txtLottoNum3,txtLottoNum4,txtLottoNum5,txtLottoNum6)
 
     }

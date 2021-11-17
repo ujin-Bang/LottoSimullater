@@ -2,8 +2,10 @@ package com.neppplus.lottosimullater
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.NumberFormat
 import java.util.*
@@ -27,6 +29,26 @@ class MainActivity : AppCompatActivity() {
 
     val mRankCountList = arrayListOf(0,0,0,0,0,0)
 
+    lateinit var  mHandler: Handler
+    // 할일이 뭔지 작석 1) 로또 구매하기
+    val buyLottoRunnable = object : Runnable {
+        override fun run() {
+            //        쓴 돈이 1천만원이 안된다면 -> 다시 로또 구매
+            if(mUseMoney <= 10000000) {
+                makeLottoNumbers()
+                makeBonusNum()
+                checkLottoRank()
+
+                mHandler.post(this)
+            }
+//        아니라면 반복 X
+            else {
+                Toast.makeText(this@MainActivity, "자동 구매를 중단합니다", Toast.LENGTH_SHORT).show()
+//            할일 추가 등록X
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,6 +60,15 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setupEvents() {
+
+        BtnAuotoBuyLotto.setOnClickListener {
+
+//            핸들러에게 할일을 등록 (로또 현장 구매)
+            mHandler.post(buyLottoRunnable)
+
+
+
+        }
 
         BtnBuyLotto.setOnClickListener {
 
@@ -94,6 +125,7 @@ class MainActivity : AppCompatActivity() {
                     mEarnedMoney += 50000000
                     mRankCountList[1]++
 
+
                     txtRankCount2.text ="${mRankCountList[1]}회"
                 }
                 else {
@@ -123,7 +155,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("등수","꽝")
                 mRankCountList[5]++
 
-                txtRankCount6.text ="${mRankCountList[05}회"
+                txtRankCount6.text ="${mRankCountList[5]}회"
             }
         }
 
@@ -202,6 +234,8 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setValues() {
+
+        mHandler = Handler(loo)
        mLottoNumTxtList = arrayListOf( txtLottoNum1,txtLottoNum2,txtLottoNum3,txtLottoNum4,txtLottoNum5,txtLottoNum6)
 
     }

@@ -124,7 +124,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=","
+            android:text="  "
             android:textSize="20sp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"/>
@@ -137,7 +137,13 @@
             android:text="27"
             android:textSize="20sp"/>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  "
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -146,18 +152,42 @@
             android:text="30"
             android:textSize="20sp"/>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  "
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="22"
             android:textSize="20sp"/>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  "
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="31"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  "
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
             android:textSize="20sp"/>
 
 
@@ -175,6 +205,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="로또 한장구매하기"/>
+
+    <Button
+        android:id="@+id/BtnAuotoBuyLotto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로또 자동 반복 구매하기"/>
+
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -261,7 +300,7 @@
             android:text="2등횟수"/>
 
         <TextView
-            android:id="@+id/txtRankCount1"
+            android:id="@+id/txtRankCount2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0회"/>
@@ -284,7 +323,7 @@
             android:text="3등횟수"/>
 
         <TextView
-            android:id="@+id/txtRankCount1"
+            android:id="@+id/txtRankCount3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0회"/>
@@ -308,7 +347,7 @@
             android:text="4등횟수"/>
 
         <TextView
-            android:id="@+id/txtRankCount1"
+            android:id="@+id/txtRankCount4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0회"/>
@@ -331,7 +370,7 @@
             android:text="5등횟수"/>
 
         <TextView
-            android:id="@+id/txtRankCount1"
+            android:id="@+id/txtRankCount5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0회"/>
@@ -355,7 +394,7 @@
             android:text="6등횟수"/>
 
         <TextView
-            android:id="@+id/txtRankCount1"
+            android:id="@+id/txtRankCount6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0회"/>

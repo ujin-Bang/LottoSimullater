@@ -29,6 +29,9 @@ class MainActivity : AppCompatActivity() {
 
     val mRankCountList = arrayListOf(0,0,0,0,0,0)
 
+//    지금 자동 구매 중인가?
+    var isAutoNow = false
+
     lateinit var  mHandler: Handler
     // 할일이 뭔지 작석 1) 로또 구매하기
     val buyLottoRunnable = object : Runnable {
@@ -63,8 +66,25 @@ class MainActivity : AppCompatActivity() {
 
         BtnAuotoBuyLotto.setOnClickListener {
 
-//            핸들러에게 할일을 등록 (로또 현장 구매)
-            mHandler.post(buyLottoRunnable)
+            if(!isAutoNow) {
+
+                //            핸들러에게 할일을 등록 (로또 현장 구매)
+                mHandler.post(buyLottoRunnable)
+
+                isAutoNow = true
+                BtnAuotoBuyLotto.text = "자동구매 중단하기"
+            }
+            else {
+
+//                다음 구매 할 일 제거
+                mHandler.removeCallbacks(buyLottoRunnable)
+
+                isAutoNow = false
+                BtnAuotoBuyLotto.text = "자동로또 재개"
+
+            }
+
+
 
 
 

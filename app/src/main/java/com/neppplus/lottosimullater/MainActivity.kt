@@ -9,6 +9,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val mWinLottoNumArr = ArrayList<Int>()
+    var mBonusNum = 0
+
+
     lateinit var mLottoNumTxtList : ArrayList<TextView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,10 +32,33 @@ class MainActivity : AppCompatActivity() {
 
             makeLottoNumbers()
 //            보너스 번호생성
+            makeBonusNum()
 
         }
 
     }
+
+
+    fun makeBonusNum(){
+
+//        써도 되는 숫자가 나올 때까지 무한 반복
+        while(true) {
+
+            val randomNum = (1..45).random()
+
+            val isDuplOk = !mWinLottoNumArr.contains(randomNum)
+
+            if(isDuplOk) {
+                mBonusNum =randomNum
+                break
+            }
+        }
+
+//        보너스 번호 텍스트뷰에 반영
+        txtLottoNumBonus.text = mBonusNum.toString()
+
+    }
+
 
     fun makeLottoNumbers(){
 
